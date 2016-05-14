@@ -1,5 +1,5 @@
 class Page < ActiveRecord::Base
-	serialize :modules, Hash
+	serialize :modules, Array
 
 	has_many :text_blocks
 end

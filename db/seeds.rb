@@ -6,13 +6,26 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-TextBlock.create(header: '')
+page1 = Page.create(title: 'Page One', modules: [{'text_block' => 1}, {'text_block' => 2}, {'text_block' => 3}])
 
+page2 = Page.create(title: 'Page Two', modules: [{'text_block' => 3}, {'text_block' => 1}, {'text_block' => 2}])
 
+page3 = Page.create(title: 'Page Three', modules: [{'text_block' => 2}, {'text_block' => 3}, {'text_block' => 1}])
 
+page1.text_blocks.create(header: 'Header One', content: 'For Science you monster')
 
-Page.create(title: 'Page One', modules: [{'text_block' => 1}, {'text_block' => 2}, {'text_block' => 3}])
+page1.text_blocks.create(header: 'Header Two', content: 'I\'m not Zero, I\'m Santa.')
 
-Page.create(title: 'Page Two', modules: [{'text_block' => 3}, {'text_block' => 1}, {'text_block' => 2}])
+page1.text_blocks.create(header: 'Header Three', content: 'Why so serious?')
 
-Page.create(title: 'Page Three', modules: [[{'text_block' => 2}, {'text_block' => 3}, {'text_block' => 1}])
+page2.text_blocks.create(header: 'Heading One', content: 'For Science you monster')
+
+page2.text_blocks.create(header: 'Heading Two', content: 'I\'m not Zero, I\'m Santa.')
+
+page2.text_blocks.create(header: 'Heading Three', content: 'Why so serious?')
+
+page3.text_blocks.create(header: 'Head upwards One', content: 'For Science you monster')
+
+page3.text_blocks.create(header: 'Head upwards Two', content: 'I\'m not Zero, I\'m Santa.')
+
+page3.text_blocks.create(header: 'Head upwards Three', content: 'Why so serious?')

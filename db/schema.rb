@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160419030742) do
+ActiveRecord::Schema.define(version: 20160419041547) do
 
   create_table "pages", force: :cascade do |t|
     t.string   "title"
@@ -27,5 +27,7 @@ ActiveRecord::Schema.define(version: 20160419030742) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "text_blocks", ["header"], name: "index_text_blocks_on_header"
 
 end
