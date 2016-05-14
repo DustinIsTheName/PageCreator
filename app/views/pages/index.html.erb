@@ -1,0 +1,25 @@
+<div class="container">
+	<h1 class="page-header">Pages</h1>
+</div>
+<div class="container">
+	<div class="row">
+ 
+		<% @pages.each do |page| %>
+			<div class="col-md-4">
+
+				<h2><%= page.title %></h2>
+
+				<h4>Contains these items:</h4>
+				<ul>
+
+					<% page.modules.each do |m| %>
+					  <li><%= m.keys[0] %></li>
+					<% end %>
+
+				</ul>
+
+			</div>
+		<% end %>
+
+	</div>
+</div>
