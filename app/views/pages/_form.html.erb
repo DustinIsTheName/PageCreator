@@ -1,0 +1,26 @@
+<%= form_for @page do |p| %>
+
+  <div class="form-group">
+  	<%= p.label :title %>
+  	<%= p.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="row">
+	  <div class="form-group col-md-4">
+		  <%= select_tag( :modules, options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		</div>
+
+	  <div class="form-group col-md-4">
+		  <%= select_tag( :modules, options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		</div>
+
+	  <div class="form-group col-md-4">
+		  <%= select_tag( :modules, options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		</div>
+	</div>
+
+  <div class="form-group">
+  	<%= p.submit %>
+	</div>
+
+<% end %>

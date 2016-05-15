@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   root 'static_pages#home'
   get '/pages' => 'pages#index'
+  get '/pages/new' => 'pages#new'
+  post '/pages' => 'pages#create'
   get '/pages/:id' => 'pages#show', as: 'page'
+  get '/pages/:id/edit' => 'pages#edit', as: 'page_edit'
+  patch '/pages/:id' => 'pages#update'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
