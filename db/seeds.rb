@@ -6,11 +6,11 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-page1 = Page.create(title: 'Page One', modules: [{'text_block' => 1}, {'text_block' => 2}, {'text_block' => 3}])
+page1 = Page.create(title: 'Page One', modules: ['text_block', 'text_block', 'text_block'])
 
-page2 = Page.create(title: 'Page Two', modules: [{'text_block' => 3}, {'text_block' => 1}, {'text_block' => 2}])
+page2 = Page.create(title: 'Page Two', modules: ['text_block', 'text_block', 'text_block'])
 
-page3 = Page.create(title: 'Page Three', modules: [{'text_block' => 2}, {'text_block' => 3}, {'text_block' => 1}])
+page3 = Page.create(title: 'Page Three', modules: ['text_block', 'text_block', 'text_block'])
 
 page1.text_blocks.create(header: 'Header One', content: 'For Science you monster')
 

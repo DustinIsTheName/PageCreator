@@ -2,14 +2,14 @@
 
 	<h1><%= @page.title %></h1>
 
+	<% @text_block_count = 0 %>
 	<% @page.modules.each do |m| %>
+		<% if m == 'text_block' %>
 
-		<% if m.keys[0] == 'text_block' %>
-
-			<%= render 'text_block', text_block: @page.text_blocks[m['text_block']-1] %>
+			<%= render 'text_block', text_block: @page.text_blocks[@text_block_count] %>
+			<% @text_block_count += 1 %>
 
 		<% end %>
-
 	<% end %>
 
 	<%= link_to 'pages', pages_path %>
