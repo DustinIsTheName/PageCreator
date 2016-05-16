@@ -12,6 +12,13 @@
 		<% end %>
 	<% end %>
 
-	<%= link_to 'pages', pages_path %>
+	<ul class="list-group">
+		<li class="list-group-item">
+			<%= link_to 'pages', pages_path %>
+		</li>
+		<li class="list-group-item">
+			<%= link_to 'edit page', page_edit_path(@page.id) %>
+		</li>
+	</ul>
 
 </div>
