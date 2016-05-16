@@ -13,15 +13,7 @@
 
 		<%= p.fields_for :text_blocks, @page.text_blocks[0] do |t| %> 
 
-			<div class="form-group">
-				<%= t.label :header %>
-				<%= t.text_field :header, class: 'form-control' %>
-			</div>
-
-			<div class="form-group">
-				<%= t.label :content %>
-				<%= t.text_area :content, class: 'form-control' %>
-			</div>
+			<%= render 'text_block_options', :field => t %>
 
 		<% end %>
 
@@ -34,15 +26,7 @@
 
 		<%= p.fields_for :text_blocks, @page.text_blocks[1] do |t| %> 
 
-			<div class="form-group">
-				<%= t.label :header %>
-				<%= t.text_field :header, class: 'form-control' %>
-			</div>
-
-			<div class="form-group">
-				<%= t.label :content %>
-				<%= t.text_area :content, class: 'form-control' %>
-			</div>
+			<%= render 'text_block_options', :field => t %>
 
 		<% end %>
 
@@ -56,15 +40,7 @@
 
 		<%= p.fields_for :text_blocks, @page.text_blocks[2] do |t| %> 
 
-			<div class="form-group">
-				<%= t.label :header %>
-				<%= t.text_field :header, class: 'form-control' %>
-			</div>
-
-			<div class="form-group">
-				<%= t.label :content %>
-				<%= t.text_area :content, class: 'form-control' %>
-			</div>
+			<%= render 'text_block_options', :field => t %>
 
 		<% end %>
 
