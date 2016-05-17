@@ -5,8 +5,14 @@
   	<%= p.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="form-group">
-	  <%= select_tag( :modules[0], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[0]), {class: 'form-control', name: 'page[modules][]'} ) %>
+  <div class="row">
+	  <div class="form-group col-md-10">
+		  <%= select_tag( :modules[0], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[0]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		</div>
+
+		<div class="form-group col-md-2">
+			<%= link_to 'Remove', '#', class: 'btn btn-primary remove-module' %>
+		</div>
 	</div>
 
 	<div class="well">
@@ -22,8 +28,15 @@
 		<% end %>
 
 	</div>
-  <div class="form-group">
-	  <%= select_tag( :modules[1], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[1]), {class: 'form-control', name: 'page[modules][]'} ) %>
+
+  <div class="row">
+	  <div class="form-group col-md-10">
+		  <%= select_tag( :modules[1], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[1]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		</div>
+
+		<div class="form-group col-md-2">
+			<%= link_to 'Remove', '#', class: 'btn btn-primary remove-module' %>
+		</div>
 	</div>
 
 	<div class="well">
@@ -40,8 +53,14 @@
 
 	</div>
 
-  <div class="form-group">
-	  <%= select_tag( :modules[2], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[2]), {class: 'form-control', name: 'page[modules][]'} ) %>
+  <div class="row">
+	  <div class="form-group col-md-10">
+		  <%= select_tag( :modules[2], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[2]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		</div>
+
+		<div class="form-group col-md-2">
+			<%= link_to 'Remove', '#', class: 'btn btn-primary remove-module' %>
+		</div>
 	</div>
 
 	<div class="well">
