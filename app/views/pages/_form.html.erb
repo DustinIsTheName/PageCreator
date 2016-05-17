@@ -11,10 +11,14 @@
 
 	<div class="well">
 
-		<%= p.fields_for :text_blocks, @page.text_blocks[0] do |t| %> 
-
-			<%= render 'text_block_options', :field => t %>
-
+		<% if @page.new_record? %>
+			<%= p.fields_for :text_blocks, @page.text_blocks.build do |t| %> 
+				<%= render 'text_block_options', :field => t %>
+			<% end %>
+		<% else %>
+			<%= p.fields_for :text_blocks, @page.text_blocks[0] do |t| %> 
+				<%= render 'text_block_options', :field => t %>
+			<% end %>
 		<% end %>
 
 	</div>
@@ -24,10 +28,14 @@
 
 	<div class="well">
 
-		<%= p.fields_for :text_blocks, @page.text_blocks[1] do |t| %> 
-
-			<%= render 'text_block_options', :field => t %>
-
+		<% if @page.new_record? %>
+			<%= p.fields_for :text_blocks, @page.text_blocks.build do |t| %> 
+				<%= render 'text_block_options', :field => t %>
+			<% end %>
+		<% else %>
+			<%= p.fields_for :text_blocks, @page.text_blocks[1] do |t| %> 
+				<%= render 'text_block_options', :field => t %>
+			<% end %>
 		<% end %>
 
 	</div>
@@ -38,10 +46,14 @@
 
 	<div class="well">
 
-		<%= p.fields_for :text_blocks, @page.text_blocks[2] do |t| %> 
-
-			<%= render 'text_block_options', :field => t %>
-
+		<% if @page.new_record? %>
+			<%= p.fields_for :text_blocks, @page.text_blocks.build do |t| %> 
+				<%= render 'text_block_options', :field => t %>
+			<% end %>
+		<% else %>
+			<%= p.fields_for :text_blocks, @page.text_blocks[2] do |t| %> 
+				<%= render 'text_block_options', :field => t %>
+			<% end %>
 		<% end %>
 
 	</div>

@@ -14,6 +14,13 @@ class PagesController < ApplicationController
 	def create
 		@page = Page.new(page_params)
 
+    i = 0
+    until i = 3
+      @text_block = @page.text_blocks.new(page_params[:text_blocks_attributes]["#{i}"])
+      @text_block.save
+      i += 1
+    end
+
 		if @page.save
 			redirect_to pages_url
 		else
@@ -28,6 +35,13 @@ class PagesController < ApplicationController
 	def update
 		@page = Page.find(params[:id])
 
+    i = 0
+    until i = 3
+      @text_block = @page.text_blocks["#{i}"]
+      @text_block.update_attributes(page_params[:text_blocks_attributes]["#{i}"])
+      i += 1
+    end
+
 		if @page.update_attributes(page_params)
 			redirect_to pages_url
 		else
@@ -38,6 +52,7 @@ class PagesController < ApplicationController
 	private
 
 	  def page_params
-	  	params.require(:page).permit(:title, :modules => [])
+	  	params.require(:page).permit(:title, :modules => [], :text_blocks_attributes => [:id, :header, :content])
 	  end
+
 end
