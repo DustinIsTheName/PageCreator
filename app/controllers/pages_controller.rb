@@ -52,7 +52,7 @@ class PagesController < ApplicationController
 	private
 
 	  def page_params
-	  	params.require(:page).permit(:title, :modules => [], :text_blocks_attributes => [:id, :header, :content])
+	  	params.require(:page).permit(:title, :modules => [], :text_blocks_attributes => [:id, :header, :content, :_destroy])
 	  end
 
 end
