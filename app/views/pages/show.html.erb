@@ -4,12 +4,19 @@
 
 	<% @text_block_count = 0 %>
 	<% @page.modules.each do |m| %>
-		<% if m == 'text_block' %>
+		<div class="container module">
+			<div class="row">
+				<% case m 
+					 when 'text_block' %>
 
-			<%= render 'text_block', text_block: @page.text_blocks[@text_block_count] %>
-			<% @text_block_count += 1 %>
+					<%= render 'text_block', text_block: @page.text_blocks[@text_block_count] %>
+					<% @text_block_count += 1 %>
 
-		<% end %>
+				<% when 'waaaaaaaa' %>
+					<%= image_tag("waluigi_time.jpg", :alt => "Waaaaaaaa!!!") %>
+				<% end %>
+			</div>
+		</div>
 	<% end %>
 
 	<ul class="list-group">

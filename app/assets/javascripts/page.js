@@ -1,6 +1,5 @@
-$(document).ready(function() {
+var ready = function() {
 
-	console.log('ready');
 	$('form').on('click', '.remove-module', function(e) {
 		e.preventDefault();
 		var wellToHide = $(this).parent().parent().next('.well').hide();
@@ -8,5 +7,7 @@ $(document).ready(function() {
 		wellToHide.find('.destroy-field').val('1');
 	});
 
+};
 
-});
+$(document).ready(ready);
+$(document).on('page:load', ready);
