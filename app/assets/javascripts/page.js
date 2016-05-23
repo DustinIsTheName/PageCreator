@@ -7,6 +7,11 @@ var ready = function() {
 		wellToHide.find('.destroy-field').val('1');
 	});
 
+	$('form').on('click', '.add-module', function(e) {
+		e.preventDefault();
+		$(this).before($(this).data('select'));
+	});
+
 };
 
 $(document).ready(ready);

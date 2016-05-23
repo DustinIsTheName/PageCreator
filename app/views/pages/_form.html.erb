@@ -9,7 +9,7 @@
 
 	  <div class="row">
 		  <div class="form-group col-md-10">
-			  <%= select_tag( :modules[0], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[0]), {class: 'form-control', name: 'page[modules][]'} ) %>
+		  	<%= render 'modules_select', :i => 0, :p => p %>
 			</div>
 
 			<div class="form-group col-md-2">
@@ -29,7 +29,7 @@
 
 		  <div class="row">
 			  <div class="form-group col-md-10">
-				  <%= select_tag( :modules[i], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[i]), {class: 'form-control', name: 'page[modules][]'} ) %>
+				  <%= render 'modules_select', :i => i, :p => p %>
 				</div>
 
 				<div class="form-group col-md-2">
@@ -44,11 +44,15 @@
 			</div>
 
 	  <% end %>
-	  
+
   <% end %>
 
   <div class="form-group">
-  	<%= p.submit %>
+  	<%= link_to_new_module 'Add Section', p, i %>
+	</div>
+
+  <div class="form-group">
+  	<%= p.submit class: "btn btn-primary" %>
 	</div>
 
 <% end %>
