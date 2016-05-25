@@ -1,1 +1,1 @@
-<%= select_tag( :module_index[i], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[0]), {class: 'form-control', name: 'page[modules][]'} ) %>
+<%= select_tag( :modules[i.to_i], options_for_select([['Text Block', 'text_block'],['Waluigi Time', 'waaaaaaaa']], p.object.modules[0]), {class: 'form-control', name: 'page[modules][]'} ) %>
