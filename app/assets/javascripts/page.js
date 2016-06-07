@@ -10,6 +10,7 @@ var ready = function() {
 	$('form').on('click', '.add-module', function(e) {
 		e.preventDefault();
 		$(this).before($(this).data('select'));
+		$(this).before($(this).data('text-block'));
 	});
 
 };
